@@ -14,7 +14,6 @@ def main():
     doctors = Doctor('David', 'Smith', 'Opthamologist','hello')
     patients = Patient('avash', 'rai', 21, '9860', '2003')
     discharged_patients = []
-    sddssddfffggfdsdsdfdfdd
 
     # keep trying to login tell the login details are correct
     while True:
