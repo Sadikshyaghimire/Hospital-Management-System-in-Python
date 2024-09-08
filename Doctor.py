@@ -1,0 +1,124 @@
+# class Doctor:
+#     """A class that deals with the Doctor operations"""
+
+#     def __init__(self, first_name, surname, speciality,password):
+#         """
+#         Args:
+#             first_name (string): First name
+#             surname (string): Surname
+#             speciality (string): Doctor`s speciality
+#         """
+
+#         self.__first_name = first_name
+#         self.__surname = surname
+#         self.__speciality = speciality
+#         self.__password=password
+#         self.__patients = []
+#         self.__appointments = []
+
+    
+#     def full_name(self) :
+#         return self.__first_name +" "+ self.__surname
+
+#     def get_first_name(self) :
+#         return self.__first_name
+
+#     def set_first_name(self, new_first_name):
+#         self.__first_name = new_first_name
+
+#     def get_password(self) :
+#         return self.__password
+
+#     def set_password(self, new_password):
+#         self.__first_name = new_password   
+
+#     def get_surname(self) :
+#         return self.__surname
+        
+#     def set_surname(self, new_surname):
+#         self.__surname = new_surname
+
+#     def get_speciality(self) :
+#         return self.__speciality
+
+#     def set_speciality(self, new_speciality):
+#         self.__speciality = new_speciality
+
+#     def add_patient(self, patient):
+#         self.__patients.append(patient)
+
+#     def __str__(self) :
+#         return f'{self.full_name():^30}|{self.__speciality:^15}'
+class Doctor:
+    """A class that deals with the Doctor operations"""
+
+    def __init__(self, first_name, surname, speciality,password):
+        """
+        Args:
+            first_name (string): First name
+            surname (string): Surname
+            speciality (string): Doctor`s speciality
+        """
+
+        self.__first_name = first_name
+        self.__surname = surname
+        self.__speciality = speciality
+        self.__password=password
+        self.__patients = []
+        self.__appointments = []
+    
+    def login(self) :
+        """
+        A method that deals with the login
+        Raises:
+            Exception: returned when the username and the password ...
+                    ... don`t match the data registered
+        Returns:
+            string: the username
+        """
+
+        print("-----Login-----")
+        #Get the details of the admin
+
+        username = input('Enter the username: ')
+        password = input('Enter the password: ')
+
+        # check if the username and password match the registered ones
+        if(self.__first_name == username) & (self.__password == password):
+            return True
+        else:
+            print("Invalid username and password.")
+
+    
+    def full_name(self) :
+        return self.__first_name +" "+ self.__surname
+
+    def get_first_name(self) :
+        return self.__first_name
+
+    def set_first_name(self, new_first_name):
+        self.__first_name = new_first_name
+
+    def get_password(self) :
+        return self.__password
+
+    def set_password(self, new_password):
+        self.__first_name = new_password   
+
+    def get_surname(self) :
+        return self.__surname
+        
+    def set_surname(self, new_surname):
+        self.__surname = new_surname
+
+    def get_speciality(self) :
+        return self.__speciality
+
+    def set_speciality(self, new_speciality):
+        self.__speciality = new_speciality
+
+    def add_patient(self, patient):
+        self.__patients.append(patient)
+
+    def __str__(self) :
+        return f'{self.full_name():^30}|{self.__speciality:^15}'
